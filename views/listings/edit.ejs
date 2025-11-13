@@ -1,0 +1,50 @@
+<% layout("/layout/boilerplate.ejs") %>
+<body>
+  
+  <div class="row offset-2 mt-3">
+    <h3>Edit a Listing</h3>
+    <p>Listing id : <%=listing._id%></p>
+    <form method="POST" action="/alllisting/<%=listing._id%>?_method=PUT" enctype="multipart/form-data">
+     <div class="col col-md-8">
+      <div>
+        <label for="title" class="form-label mt-4">Title</label>
+         <input type="text" name="newlisting[title]" class="form-control" value="<%=listing.title%>">
+      </div>
+      <div>
+          <label for="Description" class="form-label mt-4">Description</label>
+           <textarea name="newlisting[description]" class="form-control" ><%=listing.description%></textarea>
+      </div>
+      <div>
+          <label for="price" class="form-label mt-4">Price</label>
+          <input type="number" name="newlisting[price]"  class="form-control" value= "<%=listing.price%>" >
+      </div>
+    <br>
+      <div>
+          <img  src="<%=originalImageUrl%>" alt="">
+      </div>
+      
+      <div>
+         <label for="image" class="form-label mt-4">image</label>
+          <input type="file" name="newlisting[image][url]" placeholder="Enter url" class="form-control">
+      </div>
+     <div class="row">
+       <div class="col cod-md-8">
+         <div>
+           <label for="Location" class="form-label mt-4">Location</label> 
+           <input type="text" name="newlisting[location]" placeholder="location" class="form-control" value="<%=listing.location%>">
+         </div>
+       </div>
+       <div class=" col col-md-4">
+        <div>
+          <label for="country" class="form-label mt-4">country</label>
+          <input type="text" name="newlisting[country]"  class="form-control" value="<%=listing.country%>">
+        </div>
+       </div>
+     </div>
+       <br><br>
+        <button class="btn btn-dark">Add</button>
+       <br><br>
+    </div>
+   </form>
+  </div>
+</body>

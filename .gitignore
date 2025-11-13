@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+package-lock.json  # Optional: Keep this if you want exact version locking, remove if you find it annoying
+yarn.lock
+
+# Environment Variables (SECRETS - VERY IMPORTANT)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE Settings
+.vscode/
+.idea/
+
+# React/Build Outputs
+build/
+dist/
+.eslintcache
